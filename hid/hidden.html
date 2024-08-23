@@ -1,39 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Oh?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>危險病毒警告</title>
     <style>
         body {
-            background-color: rgba(165, 99, 0, 0.449);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .warning {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
+            font-size: 28px;
+            box-shadow: 0 0 20px #ff0000;
+            animation: pulse 1.5s infinite, shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
         }
-        img {
-            width: 90%;
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px #ff0000; }
+            50% { box-shadow: 0 0 40px #ff0000; }
+            100% { box-shadow: 0 0 20px #ff0000; }
         }
-        h1 {
-            font-size: 5rem;
-            color: black;
-            text-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
-            margin-top: 20px; 
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
         }
-        a{
-            color: black;
+        .skull {
+            font-size: 50px;
+            margin-bottom: 10px;
         }
-        a:link{
-            text-decoration:none;
+        .virus {
+            position: absolute;
+            font-size: 24px;
+            color: #ff0000;
+            animation: float 6s infinite;
+            opacity: 0.6;
         }
-        a:hover {
-            color: #ff9800;
-            }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <img src="./cat-ai.jpg" alt="一隻可愛的貓">
-    <h1>I WANT YOU</h1>
-    
-    
-    <a href="../index.html"><h2><</h2></a>
+    <div class="warning">
+        <div class="skull">☠️</div>
+        危險！您的設備已被感染！<br>
+        請立即加入資訊社以解除病毒
+    </div>
+    <script>
+        function createVirus() {
+            const virus = document.createElement('div');
+            virus.textContent = '🦠';
+            virus.classList.add('virus');
+            virus.style.left = Math.random() * window.innerWidth + 'px';
+            virus.style.top = Math.random() * window.innerHeight + 'px';
+            virus.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            document.body.appendChild(virus);
+        }
+        for (let i = 0; i < 20; i++) {
+            createVirus();
+        }
+    </script>
 </body>
 </html>
