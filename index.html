@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="大直高中資訊社26屆">
+    <meta name="keyword" content="大直高中,資訊社,26">
+    <title>大直高中 資訊社 26th</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container"></div>
+
+        <div class="bookmark">
+                
+            <div id="bm1" class="bmk"><a href="#infoSection1"><h4>社團簡介&ensp;</h3></a></div>   
+                <p>&ensp;</p>
+            <div id="bm2" class="bmk"><a href="#infoSection6"><h4>產品理念&ensp;</h3></a></div>    
+                <p>&ensp;</p>
+            <div id="bm6" class="bmk"><a href="#infoSection2"><h4>產品&ensp;</h3></a></div>    
+                <p>&ensp;</p>
+            <div id="bm3" class="bmk"><a href="#infoSection3"><h4>聯絡我們&ensp;</h3></a></div>    
+                <p>&ensp;</p>
+            <div id="bm4" class="bmk"><a href="#infoSection4"><h4>其他&ensp;</h3></a></div>    
+                <p>&ensp;</p>
+            <div id="bm5" class="bmk"><a href="#game-section"><h4>遊戲&ensp;</h3></a></div>    
+            
+        </div>
+
+            <h1>大直高中 資訊社 26th</h1>
+          
+            <div id="infoSection1" class="section">
+                <h2>社團簡介</h2>
+                <h3>2024年,資訊社迎來了第26屆!這裡聚集了對程式設計、硬體軟體等方面有興趣的學生,大家在相互砥礪交流下, 不斷進步。我們跟隨著上一屆學長姐的腳步,由社團中選出的教學帶領大家,精進自己資訊實力,為未來鋪上光明的道路!社員們之間雖無特別熱絡或熟捻,但相處融洽,且課堂中沒有權威式 管教或是強硬規範,也是資訊社得以維持和平友善的關鍵。</h3>
+            </div>   
+
+            <div id="infoSection6" class="section">
+                <h2>產品理念</h2>
+                <div class="features-container">
+                    <div id="feature" class="feature-box">
+                        <h3>在資訊課裡，我們學會用 Visual Basic 寫程式，並將所學應用在遊戲開發上，親手設計出屬於自己的遊戲，體驗從程式學習到創作的成就感！</h3>
+                    </div>
+                </div>
+            </div>
+
+        <div id="infoSection2" class="section">
+            <h2>產品</h2>
+            <div class="features-container">
+                <div id="feature1" class="feature-box">
+                    <h3>「61」青春PARTY</h3>
+                    <p>瞄準6.1秒</p>
+                </div>
+                <div id="feature2" class="feature-box">
+                    <h3>大戰耐摔王</h3>
+                    <p>打敗耐摔王</p>
+                </div>
+                <div id="feature3" class="feature-box">
+                    <h3>VR過山車</h3>
+                    <p>速度與激情
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+      
+        <div id="infoSection3" class="section">
+            <h2>聯絡我們</h2>
+            <a href="https://discord.gg/D5d5X9g6NP" class="discord-btn" target="_blank">
+            <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord Icon">
+            Join Our Discord
+            </a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="email-btn" target="_blank">
+                <img src="https://www.svgrepo.com/show/464889/email-open.svg"co alt="Email Icon">
+                dzif26th@gmail.com
+            </a>
+        </div>
+
+        <div id="infoSection4" class="section">
+            <h2>其他</h2>
+            <a href="https://dzif26th.github.io/club-inform//DZIF26th/nfc_illustrate.html" class="nfctools-btn">NFC讀寫教學</a>
+            <br>
+        </div>
+        
+        <div id="game-section" class="game-section">
+            <h2>遊戲</h2>
+            <div id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div id="outcome"></div>
+            <button id="reset">重新開始遊戲</button>
+        </div>
+        
+        <br><br><br><br>
+        
+        <button id="celebrateButton">?</button>
+        <div id="floatingMessage">大直高中61周年<br>生日快樂🎉
+            <br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxWNgN0wlmorBIkPR8Zd8NMK5fgnScdBa5PA&s" alt="">
+        </div>
+        
+        <!-- 引入 confetti.js 函式庫 -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
+
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

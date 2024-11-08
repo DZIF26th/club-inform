@@ -1,0 +1,258 @@
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.outer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(255, 153, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #f0f0f0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.inner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.section {
+    width: 80%;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.bookmark{
+    display: flex
+    
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-box {
+    flex: 1 1 250px;
+    background-color: rgba(255, 153, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 153, 0, 0.4);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+h4{
+    color: darkgrey;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+#game-section {
+    margin-top: 60px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ff9800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: rgba(255, 153, 0, 0.2);
+}
+
+#outcome {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff9800;
+    text-align: center;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    font-family: inherit;
+    background-color: #ff9800;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ffa726;
+    transform: translateY(-2px);
+}
+
+.discord-btn {
+    display: flex;
+    align-items: center;
+    background-color: #7289da;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.discord-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.discord-btn:hover {
+    background-color: #5b6eae;
+}
+
+.email-btn {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.email-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.email-btn:hover {
+    background-color: #45a049;
+}
+
+a:link{
+    text-decoration:none;
+    }
+
+a:hover {
+        text-decoration-line: underline;
+       color: #ff9800;
+        }
+
+.nfctools-btn {
+    display: flex;
+    align-items: center;
+    background-color: #02a9f779;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+ /* 按鈕樣式 */
+ #celebrateButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 懸浮訊息樣式 */
+#floatingMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e3277;
+    color: #ececec;
+    padding: 50px;
+    border-radius: 20px;
+    font-size: 48px;
+    display: none;
+}
